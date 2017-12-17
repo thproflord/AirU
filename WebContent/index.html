@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<script type="text/javascript">
+
+
+//Validaciones para que el usuario sera alfanumerico
+function validar(){
+	var usuario=document.getElementsByName("usuario")[0].value;
+	var pass= document.getElementsByName("pass")[0].value;
+	if (!/^([0-9a-zA-Z])*$/.test(usuario)){
+        alert("El usuario debe ser alfanumerico");
+		return false;
+    }
+	/*else{
+		document.form[0].setUsuario= usuario;
+		document.form[0].setContrasena= pass;
+		document.form[0].event= login;
+	}*/
+}
+
+</script>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Dashboard">
+    <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+
+    <title>AirUcab</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <!--external css-->
+    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+        
+    <!-- Custom styles for this template -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/style-responsive.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+      <!-- **********************************************************************************************************************************************************
+      MAIN CONTENT
+      *********************************************************************************************************************************************************** -->
+
+	  <div id="login-page">
+	  	<div class="container">
+	  	
+		       <form class="form-login" action="login" method="post">
+		        <h2 class="form-login-heading">Registrate</h2>
+		        <div class="login-wrap">
+		            <input type="text" class="form-control" placeholder="Usuario" autofocus name="usuario"  >
+		            <br>
+		            <input type="password" class="form-control" placeholder="Contrasena" name="pass">
+		            <label class="checkbox">
+		                <span class="pull-right">
+		                    <a data-toggle="modal" href="login.html#myModal"> Olvido Contrasena?</a>
+		
+		                </span>
+		            </label>
+		            <button class="btn btn-theme btn-block" onclick="return validar();"> Entrar</button>
+		            <hr>
+		            
+		            <div class="registration">
+		                No Tienes Una Cuenta Todavia?<br/>
+		                <a class="" href="home.html">
+		                    Create Una 
+		                </a>
+		            </div>
+		               <div class="registration">
+		                Invitado<br/>
+		                <a class="" href="home.html">
+		                    Entrar
+		                </a>
+		            </div>
+		
+		        </div>
+		
+		          <!-- Modal -->
+		          <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="myModal" class="modal fade">
+		              <div class="modal-dialog">
+		                  <div class="modal-content">
+		                      <div class="modal-header">
+		                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+		                          <h4 class="modal-title"> Olvido Contrasena?</h4>
+		                      </div>
+		                      <div class="modal-body">
+		                          <p>Introduzca su email para reiniciar su contrasena.</p>
+		                          <input type="text" name="email" placeholder="Email" autocomplete="off" class="form-control placeholder-no-fix">
+		
+		                      </div>
+		                      <div class="modal-footer">
+		                          <button data-dismiss="modal" class="btn btn-default" type="button">Cancelar</button>
+		                          <button class="btn btn-theme" type="button">Enviar</button>
+		                      </div>
+		                  </div>
+		              </div>
+		          </div>
+		          <!-- modal -->
+		
+		      </form>	  	
+	  	
+	  	</div>
+	  </div>
+
+    <!-- js placed at the end of the document so the pages load faster -->
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <!--BACKSTRETCH-->
+    <!-- You can use an image of whatever size. This script will stretch to fit in any screen size.-->
+    <script type="text/javascript" src="assets/js/jquery.backstretch.min.js"></script>
+    <script>
+        $.backstretch("assets/img/boening.jpg", {speed: 500});
+    </script>
+
+
+  </body>
+</html>
