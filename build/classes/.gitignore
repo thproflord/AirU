@@ -1,1 +1,10 @@
-/LoginController.class
+/postgres/
+/ProveedorController.class
+/HomeController.class
+/UsuariosController.class
+/InventarioController.class
+/SedesController.class
+/OrdenesController.class
+/ReportesController.class
+/ClientesController.class
+/AvionesController.class

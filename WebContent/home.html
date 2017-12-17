@@ -1,5 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+  <script type="text/javascript">
+  	function prueba(){
+  		document.cliente.event= "prueba"
+  		document.cliente.action= "clientes.html";
+  		document.cliente.submit();
+  	}
+  </script>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -37,11 +44,11 @@
                   <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Colapsar"></div>
               </div>
             <!--logo start-->
-            <a href="home.html" class="logo"><b>AirUcab</b></a>
+            <a href="home" class="logo"><b>AirUcab</b></a>
             <!--logo end-->
 			<div class="top-menu">
             		<ul class="nav pull-right top-menu">
-                    <li><a class="logout" href="index.html">Logout</a></li>
+                    <li><a class="logout" href="index.html">Salir</a></li>
             		</ul>
             </div>
         </header>
@@ -60,62 +67,67 @@
               	  <h5 class="centered">Marcel Newman</h5>
               	  	
                   <li class="mt">
-                      <a class="active" href="home.html">
-                          <i class="fa fa-dashboard"></i>
+                      <a href="usuarios">
+                          <i class="fa fa-users"></i>
                           <span>Usuarios</span>
                       </a>
                   </li>
 
                   <li class="sub-menu">
-                      <a href="sedes.html" >
-                          <i class="fa fa-desktop"></i>
+                      <a href="sedes" >
+                          <i class="fa fa-building"></i>
                           <span>Sedes</span>
                       </a>
                       
                   </li>
 
                   <li class="sub-menu">
-                      <a href="javascript:;" >
-                          <i class="fa fa-cogs"></i>
+                      <a href="inventario" >
+                          <i class="fa fa-archive"></i>
                           <span>Inventario</span>
                       </a>
                       
                   </li>
                   <li class="sub-menu">
-                      <a href="javascript:;" >
-                          <i class="fa fa-book"></i>
+                      <a href="proveedores" >
+                          <i class="fa fa-shopping-cart"></i>
                           <span>Proveedores</span>
                       </a>
                      
                   </li>
                   <li class="sub-menu">
-                      <a href="javascript:;" >
+                      <a  href="ordenes" >
                           <i class="fa fa-tasks"></i>
                           <span>Ordenes</span>
                       </a>
                       
                   </li>
                   <li class="sub-menu">
-                      <a href="javascript:;" >
-                          <i class="fa fa-th"></i>
+                      <a href="reportes" >
+                          <i class="fa fa-book"></i>
                           <span>Reportes</span>
                       </a>
                     
                   </li>
                   <li class="sub-menu">
-                      <a href="javascript:;" >
-                          <i class=" fa fa-bar-chart-o"></i>
+                      <a href="clientes" >
+                          <i class=" fa fa-briefcase"></i>
                           <span>Clientes</span>
                       </a>
                      
                   </li>
                   <li class="sub-menu">
-                      <a href="javascript:;" >
-                          <i class=" fa fa-bar-chart-o"></i>
+                      <a href="aviones" >
+                          <i class=" fa fa-plane"></i>
                           <span>Aviones</span>
                       </a>
                      
                   </li>
+
+              </ul>
+              <!-- sidebar menu end-->
+          </div>
+      </aside>
 
               </ul>
               <!-- sidebar menu end-->
