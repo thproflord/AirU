@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.apache.catalina.servlet4preview.RequestDispatcher;
 
+import postgresql.Conection;
+
 /**
  * Servlet implementation class LoginController
  */
@@ -37,8 +39,10 @@ public class LoginController extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		javax.servlet.RequestDispatcher dispatcher = request.getRequestDispatcher("home.html");
-		dispatcher.forward(request, response);
+		Conection postgres = new Conection();
+		postgres.lugar();
 	}
+	
+
 
 }
