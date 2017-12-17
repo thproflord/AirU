@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -57,7 +60,7 @@
               <ul class="sidebar-menu" id="nav-accordion">
               
               	  <p class="centered"><a href="profile.html"><img src="assets/img/ui-sam.jpg" class="img-circle" width="60"></a></p>
-              	  <h5 class="centered">Marcel Newman</h5>
+              	  <h5 class="centered">Clientes</h5>
               	  	
                   <li class="mt">
                       <a href="home.html">
@@ -127,17 +130,53 @@
       MAIN CONTENT
       *********************************************************************************************************************************************************** -->
       <!--main content start-->
+      <form action="cliente" method="post">
+	<html:hidden name="nacionalidad" value="${request.getAttribute('clientes').val}"></html:hidden>
       <section id="main-content">
           <section class="wrapper site-min-height">
           	<h3><i class="fa fa-angle-right"></i> Blank Page</h3>
           	<div class="row mt">
-          		<div class="col-lg-12">
-          		<p>Place your content here.</p>
-          		</div>
+	                  <div class="col-md-12">
+	                  	  <div class="content-panel">
+	                  	  	  <h4><i class="fa fa-angle-right"></i> Clientes</h4>
+	                  	  	  <hr>
+	                  	  	  
+		                      <table class="table">
+		                          <thead>
+		                          <tr>
+		                              <td><b>Nacionalidad</b></td>
+		                              <td><b>Nombre</b></td>
+		                              <td><b>Apellido</b></td>
+		                              <td><b>Fecha</b></td>
+		                          </tr>
+		                          </thead>
+		                          <tbody>
+		                         <% 
+		                         int numberMax=(Integer)request.getSession().getAttribute("indice");
+
+		                         %>
+		                         
+		                         <% for (int i = 0; i < numberMax; i++) 
+		                         { %>
+		                           <tr>
+		                           
+		                              <td><%= request.getAttribute("nacionalidad"+i) %></td>
+		                              <td><%= request.getAttribute("nombre"+i) %></td>
+		                              <td><%= request.getAttribute("apellido"+i) %></td>
+		                              <td><%= request.getAttribute("fecha"+i) %></td>
+		                              </tr>
+		                         <% } %>
+
+	                         
+		                          </tbody>
+		                      </table>
+	                  	  </div><! --/content-panel -->
+	                  </div>
           	</div>
 			
 		</section><! --/wrapper -->
-      </section><!-- /MAIN CONTENT -->
+      </section>
+      </form><!-- /MAIN CONTENT -->
 
       <!--main content end-->
       <!--footer start-->
