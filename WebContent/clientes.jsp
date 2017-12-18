@@ -106,7 +106,7 @@
                     
                   </li>
                   <li class="sub-menu">
-                      <a class="active" href="clientes" >
+                      <a class="active" href="cliente" >
                           <i class=" fa fa-briefcase"></i>
                           <span>Clientes</span>
                       </a>
@@ -131,10 +131,8 @@
       *********************************************************************************************************************************************************** -->
       <!--main content start-->
       <form action="cliente" method="post">
-	<html:hidden name="nacionalidad" value="${request.getAttribute('clientes').val}"></html:hidden>
       <section id="main-content">
           <section class="wrapper site-min-height">
-          	<h3><i class="fa fa-angle-right"></i> Blank Page</h3>
           	<div class="row mt">
 	                  <div class="col-md-12">
 	                  	  <div class="content-panel">

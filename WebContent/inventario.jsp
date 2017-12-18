@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -67,7 +68,7 @@
                   </li>
 
                   <li class="sub-menu">
-                      <a class="active" href="sedes" >
+                      <a href="sedes" >
                           <i class="fa fa-building"></i>
                           <span>Sedes</span>
                       </a>
@@ -75,7 +76,7 @@
                   </li>
 
                   <li class="sub-menu">
-                      <a href="inventario" >
+                      <a class="active" href="inventario" >
                           <i class="fa fa-archive"></i>
                           <span>Inventario</span>
                       </a>
@@ -103,7 +104,7 @@
                     
                   </li>
                   <li class="sub-menu">
-                      <a href="clientes" >
+                      <a  href="cliente" >
                           <i class=" fa fa-briefcase"></i>
                           <span>Clientes</span>
                       </a>
@@ -129,11 +130,38 @@
       <!--main content start-->
       <section id="main-content">
           <section class="wrapper site-min-height">
-          	<h3><i class="fa fa-angle-right"></i> Blank Page</h3>
           	<div class="row mt">
-          		<div class="col-lg-12">
-          		<p>Place your content here.</p>
-          		</div>
+	                  <div class="col-md-12">
+	                  	  <div class="content-panel">
+	                  	  	  <h4><i class="fa fa-angle-right"></i> Inventario</h4>
+	                  	  	  <hr>         	  	  
+		                      <table class="table">
+		                          <thead>
+		                          <tr>
+		                              <td><b>Id</b></td>
+		                              <td><b>Cantidad</b></td>
+		                          </tr>
+		                          </thead>
+		                          <tbody>
+		                         <% 
+		                         int numberMax=(Integer)request.getSession().getAttribute("indice");
+
+		                         %>
+		                         
+		                         <% for (int i = 0; i < numberMax; i++) 
+		                         { %>
+		                           <tr>
+		                           
+		                              <td><%= request.getAttribute("id"+i) %></td>
+		                              <td><%= request.getAttribute("cantidad"+i) %></td>
+		                              </tr>
+		                         <% } %>
+
+	                         
+		                          </tbody>
+		                      </table>
+	                  	  </div><! --/content-panel -->
+	                  </div>
           	</div>
 			
 		</section><! --/wrapper -->

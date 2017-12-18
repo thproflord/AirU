@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -75,7 +76,7 @@
                   </li>
 
                   <li class="sub-menu">
-                      <a class="active" href="inventario" >
+                      <a href="inventario" >
                           <i class="fa fa-archive"></i>
                           <span>Inventario</span>
                       </a>
@@ -103,14 +104,14 @@
                     
                   </li>
                   <li class="sub-menu">
-                      <a  href="clientes" >
+                      <a href="cliente" >
                           <i class=" fa fa-briefcase"></i>
                           <span>Clientes</span>
                       </a>
                      
                   </li>
                   <li class="sub-menu">
-                      <a href="aviones" >
+                      <a class="active" href="aviones" >
                           <i class=" fa fa-plane"></i>
                           <span>Aviones</span>
                       </a>

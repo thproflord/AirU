@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -10,7 +11,6 @@
     <title>AirUcab</title>
 
     <!-- Bootstrap core CSS -->
-    
     <link href="assets/css/bootstrap.css" rel="stylesheet">
     <!--external css-->
     <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
@@ -68,7 +68,7 @@
                   </li>
 
                   <li class="sub-menu">
-                      <a href="sedes" >
+                      <a class="active" href="sedes" >
                           <i class="fa fa-building"></i>
                           <span>Sedes</span>
                       </a>
@@ -83,7 +83,7 @@
                       
                   </li>
                   <li class="sub-menu">
-                      <a class="active" href="proveedores" >
+                      <a href="proveedores" >
                           <i class="fa fa-shopping-cart"></i>
                           <span>Proveedores</span>
                       </a>
@@ -104,7 +104,7 @@
                     
                   </li>
                   <li class="sub-menu">
-                      <a href="clientes" >
+                      <a href="cliente" >
                           <i class=" fa fa-briefcase"></i>
                           <span>Clientes</span>
                       </a>

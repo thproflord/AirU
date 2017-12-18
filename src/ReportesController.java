@@ -27,7 +27,7 @@ public class ReportesController extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		javax.servlet.RequestDispatcher dispatcher = request.getRequestDispatcher("reportes.html");
+		javax.servlet.RequestDispatcher dispatcher = request.getRequestDispatcher("reportes.jsp");
 		dispatcher.forward(request, response);
 	}
 

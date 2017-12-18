@@ -27,7 +27,7 @@ public class OrdenesController extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		javax.servlet.RequestDispatcher dispatcher = request.getRequestDispatcher("ordenes.html");
+		javax.servlet.RequestDispatcher dispatcher = request.getRequestDispatcher("ordenes.jsp");
 		dispatcher.forward(request, response);
 	}
 

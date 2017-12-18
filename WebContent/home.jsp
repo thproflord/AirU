@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html lang="en">
   <script type="text/javascript">
   	function prueba(){
@@ -110,7 +111,7 @@
                     
                   </li>
                   <li class="sub-menu">
-                      <a href="clientes" >
+                      <a href="cliente" >
                           <i class=" fa fa-briefcase"></i>
 
                           <span>Clientes</span>

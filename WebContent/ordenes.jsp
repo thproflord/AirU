@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -105,7 +106,7 @@
                   <li class="sub-menu">
                       <a href="clientes" >
                           <i class=" fa fa-briefcase"></i>
-                          <span>Clientes</span>
+                          <span>Cliente</span>
                       </a>
                      
                   </li>

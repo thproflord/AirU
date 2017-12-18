@@ -27,7 +27,7 @@ public class SedesController extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		javax.servlet.RequestDispatcher dispatcher = request.getRequestDispatcher("sedes.html");
+		javax.servlet.RequestDispatcher dispatcher = request.getRequestDispatcher("sedes.jsp");
 		dispatcher.forward(request, response);
 	}
 

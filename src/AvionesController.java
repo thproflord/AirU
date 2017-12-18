@@ -27,7 +27,7 @@ public class AvionesController extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		javax.servlet.RequestDispatcher dispatcher = request.getRequestDispatcher("aviones.html");
+		javax.servlet.RequestDispatcher dispatcher = request.getRequestDispatcher("aviones.jsp");
 		dispatcher.forward(request, response);
 	}
 

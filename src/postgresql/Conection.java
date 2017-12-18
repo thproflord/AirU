@@ -20,7 +20,7 @@ public class Conection {
 		System.out.println("hola");
 		try {
 			Class.forName("org.postgresql.Driver");
-			Connection connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/AirUcab16", "postgres", "20914366");
+			Connection connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/AirUcab1", "HomeFolder", "fernando1$");
 			PreparedStatement ps = connection.prepareStatement("select * from lugar where lug_codigo = 10");
 			ResultSet rS = ps.executeQuery();
 			
@@ -40,7 +40,7 @@ public class Conection {
 		Collection lugar2 = new ArrayList<>();
 		try {
 			Class.forName("org.postgresql.Driver");
-			Connection connection = DriverManager.getConnection("jdbc:postgresql://localhost:5433/AirUcab15", "postgres", "20914366");
+			Connection connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/AirUcab1", "HomeFolder", "fernando1$");
 			PreparedStatement ps = connection.prepareStatement("select lug_nombre, lug_codigo from lugar where lug_codigo = 10");
 			ResultSet lugar = ps.executeQuery();
 			
@@ -61,7 +61,7 @@ public class Conection {
 		ArrayList cliente = new ArrayList<>();
 		try {
 			Class.forName("org.postgresql.Driver");
-			Connection connection = DriverManager.getConnection("jdbc:postgresql://localhost:5433/AirUcab15", "postgres", "20914366");
+			Connection connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/AirUcab1", "HomeFolder", "fernando1$");
 			PreparedStatement ps = connection.prepareStatement("select cli_fecha_nac, cli_nombre, cli_apellido, cli_nacionalidad"
 					+ " from cliente");
 			ResultSet cli = ps.executeQuery();
@@ -83,4 +83,51 @@ public class Conection {
 		
 		return cliente;
 	}
+	
+	public ArrayList proveedores() {
+		ArrayList proveedor = new ArrayList<>();
+		try {
+			
+			Class.forName("org.postgresql.Driver");
+			Connection connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/AirUcab1", "HomeFolder", "fernando1$");
+			PreparedStatement ps = connection.prepareStatement("select pro_documento_id, pro_nombre, pro_apellido, pro_nacionalidad"
+					+ " from proveedor");
+			ResultSet pro = ps.executeQuery();
+			
+			while(pro.next()) {
+				
+				proveedor.add(pro.getString("pro_documento_id"));
+				proveedor.add(pro.getString("pro_nombre"));
+				proveedor.add(pro.getString("pro_apellido"));
+				proveedor.add(pro.getString("pro_nacionalidad"));
+
+
+			}	
+			
+		}catch(Exception ex) {
+			System.out.println(ex.getMessage());
+		}
+		return proveedor;
+	}
+	
+	public ArrayList inventario() {
+		ArrayList inventario = new ArrayList<>();
+		try {
+			Class.forName("org.postgresql.Driver");
+			Connection connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/AirUcab1", "HomeFolder", "fernando1$");
+			PreparedStatement ps = connection.prepareStatement("select inmapi_id, inmapi_cantidad_productos"
+					+ " from inventario");
+			ResultSet inv = ps.executeQuery();
+			while(inv.next()) {
+				
+				inventario.add(inv.getString("inmapi_id"));
+				inventario.add(inv.getString("inmapi_cantidad_productos"));
+			}	
+			
+		}catch(Exception ex){
+			System.out.println(ex.getMessage());
+		}
+		return inventario;	
+	}
+
 }

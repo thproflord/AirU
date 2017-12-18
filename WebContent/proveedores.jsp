@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -10,6 +11,7 @@
     <title>AirUcab</title>
 
     <!-- Bootstrap core CSS -->
+    
     <link href="assets/css/bootstrap.css" rel="stylesheet">
     <!--external css-->
     <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
@@ -82,7 +84,7 @@
                       
                   </li>
                   <li class="sub-menu">
-                      <a href="proveedores" >
+                      <a class="active" href="proveedores" >
                           <i class="fa fa-shopping-cart"></i>
                           <span>Proveedores</span>
                       </a>
@@ -105,12 +107,12 @@
                   <li class="sub-menu">
                       <a href="clientes" >
                           <i class=" fa fa-briefcase"></i>
-                          <span>Clientes</span>
+                          <span>Cliente</span>
                       </a>
                      
                   </li>
                   <li class="sub-menu">
-                      <a class="active" href="aviones" >
+                      <a href="aviones" >
                           <i class=" fa fa-plane"></i>
                           <span>Aviones</span>
                       </a>
@@ -129,14 +131,46 @@
       <!--main content start-->
       <section id="main-content">
           <section class="wrapper site-min-height">
-          	<h3><i class="fa fa-angle-right"></i> Blank Page</h3>
           	<div class="row mt">
-          		<div class="col-lg-12">
-          		<p>Place your content here.</p>
-          		</div>
+	                  <div class="col-md-12">
+	                  	  <div class="content-panel">
+	                  	  	  <h4><i class="fa fa-angle-right"></i> Proveedores</h4>
+	                  	  	  <hr>
+	                  	  	  
+		                      <table class="table">
+		                          <thead>
+		                          <tr>
+		                              <td><b>Documento</b></td>
+		                              <td><b>Nombre</b></td>
+		                              <td><b>Apellido</b></td>
+		                              <td><b>Nacionalidad</b></td>
+		                          </tr>
+		                          </thead>
+		                          <tbody>
+		                         <% 
+		                         int numberMax=(Integer)request.getSession().getAttribute("indice");
+
+		                         %>
+		                         
+		                         <% for (int i = 0; i < numberMax; i++) 
+		                         { %>
+		                           <tr>
+		                           
+		                              <td><%= request.getAttribute("documento"+i) %></td>
+		                              <td><%= request.getAttribute("nombre"+i) %></td>
+		                              <td><%= request.getAttribute("apellido"+i) %></td>
+		                              <td><%= request.getAttribute("nacionalidad"+i) %></td>
+		                              </tr>
+		                         <% } %>
+
+	                         
+		                          </tbody>
+		                      </table>
+	                  	  </div>
+	                  </div>
           	</div>
 			
-		</section><! --/wrapper -->
+		</section>
       </section><!-- /MAIN CONTENT -->
 
       <!--main content end-->
