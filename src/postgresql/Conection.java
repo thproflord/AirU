@@ -65,10 +65,10 @@ public class Conection {
 			PreparedStatement ps = connection.prepareStatement("select cli_fecha_nac, cli_nombre, cli_apellido, cli_nacionalidad"
 					+ " from cliente");
 			ResultSet cli = ps.executeQuery();
-			
+			int i = 0;
 			while(cli.next()) {
 				
-				cliente.add(cli.getString("cli_nacionalidad"));
+				cliente.add(i++);
 				cliente.add(cli.getString("cli_fecha_nac"));
 				cliente.add(cli.getString("cli_nombre"));
 				cliente.add(cli.getString("cli_apellido"));
@@ -128,6 +128,28 @@ public class Conection {
 			System.out.println(ex.getMessage());
 		}
 		return inventario;	
+	}
+	
+	public ArrayList prueba() {
+		ArrayList prueba = new ArrayList<>();
+		try {
+			Class.forName("org.postgresql.Driver");
+			Connection connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/AirUcab1", "HomeFolder", "fernando1$");
+			PreparedStatement ps = connection.prepareStatement("select pru_codigo, pru_tipo, pru_descripcion"
+					+ " from prueba");
+			ResultSet prub = ps.executeQuery();
+			
+			while(prub.next()) {
+				
+				prueba.add(prub.getString("pru_codigo"));
+				prueba.add(prub.getString("pru_tipo"));
+				prueba.add(prub.getString("pru_descripcion"));
+			}	
+			
+		}catch(Exception ex){
+			System.out.println(ex.getMessage());
+		}
+		return prueba;	
 	}
 
 }

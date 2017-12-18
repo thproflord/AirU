@@ -33,7 +33,7 @@
       TOP BAR CONTENT & NOTIFICATIONS
       *********************************************************************************************************************************************************** -->
       <!--header start-->
-     <header class="header black-bg">
+    	<header class="header black-bg">
               <div class="sidebar-toggle-box">
                   <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Colapsar"></div>
               </div>
@@ -45,14 +45,14 @@
                     <li><a class="logout" href="index.html">Salir</a></li>
             		</ul>
             </div>
-        </header>
+       </header>
       <!--header end-->
       
       <!-- **********************************************************************************************************************************************************
       MAIN SIDEBAR MENU
       *********************************************************************************************************************************************************** -->
       <!--sidebar start-->
-      <aside>
+     <aside>
           <div id="sidebar"  class="nav-collapse ">
               <!-- sidebar menu start-->
               <ul class="sidebar-menu" id="nav-accordion">
@@ -61,7 +61,7 @@
               	  <h5 class="centered">Marcel Newman</h5>
               	  	
                   <li class="mt">
-                      <a href="usuarios">
+                      <a href="home">
                           <i class="fa fa-users"></i>
                           <span>Usuarios</span>
                       </a>
@@ -90,7 +90,7 @@
                      
                   </li>
                   <li class="sub-menu">
-                      <a class="active" href="ordenes" >
+                      <a  href="ordenes" >
                           <i class="fa fa-tasks"></i>
                           <span>Ordenes</span>
                       </a>
@@ -104,9 +104,9 @@
                     
                   </li>
                   <li class="sub-menu">
-                      <a href="clientes" >
+                      <a href="cliente" >
                           <i class=" fa fa-briefcase"></i>
-                          <span>Cliente</span>
+                          <span>Clientes</span>
                       </a>
                      
                   </li>
@@ -118,10 +118,11 @@
                      
                   </li>
                    <li class="sub-menu">
-                      <a href="prueba" >
+                      <a class="active" href="prueba" >
                           <i class="fa fa-archive"></i>
                           <span>Prueba</span>
-                      </a>                     
+                      </a>
+                      
                   </li>
 
               </ul>
@@ -136,13 +137,46 @@
       <!--main content start-->
       <section id="main-content">
           <section class="wrapper site-min-height">
-          	<h3><i class="fa fa-angle-right"></i> Blank Page</h3>
           	<div class="row mt">
-          		<div class="col-lg-12">
-          		<p>Place your content here.</p>
-          		</div>
-          	</div>
-			
+                  <div class="col-md-12">
+                      <div class="content-panel">
+                          <table class="table table-striped table-advance table-hover">
+	                  	  	  <h4><i class="fa fa-angle-right"></i> Advanced Table</h4>
+	                  	  	  <hr>
+                              <thead>
+                              <tr>
+                                  <th> Codigo</th>
+                                  <th>  Tipo</th>
+                                  <th>Descripcion</th>
+                                  <th></th>
+                              </tr>
+                              </thead>
+                              <tbody>
+                              <% 
+		                         int numberMax=(Integer)request.getSession().getAttribute("indice");
+
+		                         %>
+		                         
+		                     <% for (int i = 0; i < numberMax; i++) 
+		                         { %>
+		                      <tr>
+                                  <td><%= request.getAttribute("codigo"+i) %></td>
+                                  <td> <%= request.getAttribute("tipo"+i) %></td>
+                                  <td><%= request.getAttribute("descripcion"+i) %></td>
+                                  <td>
+                                  	<form action="prueba" method="post">
+                                  	
+                                      <button class="btn btn-success btn-xs" href="home" type="submit"><i class="fa fa-check"></i></button>                              
+                                     </form>
+                                  </td>
+                              </tr>
+		                         <% } %>
+                                                 
+                              </tbody>
+                          </table>
+                      </div><!-- /content-panel -->
+                  </div><!-- /col-md-12 -->
+              </div>
 		</section><! --/wrapper -->
       </section><!-- /MAIN CONTENT -->
 
@@ -150,8 +184,8 @@
       <!--footer start-->
       <footer class="site-footer">
           <div class="text-center">
-              2017- AirUcab
-              <a href="home.html" class="go-top">
+              2014 - Alvarez.is
+              <a href="blank.html#" class="go-top">
                   <i class="fa fa-angle-up"></i>
               </a>
           </div>

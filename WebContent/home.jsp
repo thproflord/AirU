@@ -122,8 +122,13 @@
                       <a href="aviones" >
                           <i class=" fa fa-plane"></i>
                           <span>Aviones</span>
-                      </a>
-                     
+                      </a>                     
+                  </li>              
+                    <li class="sub-menu">
+                      <a href="prueba" >
+                          <i class="fa fa-archive"></i>
+                          <span>Prueba</span>
+                      </a>                     
                   </li>
 
               </ul>
